@@ -16,6 +16,7 @@ OpenAI Codex was used in Operator/Agent mode to scaffold the bounded TM1 service
 | 2026-07-16 | Critic | Validation, logging, unsupported-provider behavior, infrastructure claims, security boundary, run instructions, and test coverage | OpenAI Codex reviewed the generated repository and recorded findings in `docs/critic-review.md`. | Both teammates reviewed the resolved findings and approved the final local implementation on 2026-07-17; live AWS claims remain intentionally unverified. |
 | 2026-07-16 | Verification | Lint, five automated tests, live local endpoint smoke test, diagram render, SAM validation, and SAM build | OpenAI Codex ran the checks and captured their scope in `docs/verification.md`. | Local evidence passed and was reviewed by both teammates. Learner Lab deployment remains unverified. |
 | 2026-07-17 | Human review | Code, tests, API behavior, diagram, SAM resources, documentation, and retained agent-generated files | Noah Hicks and Taha Zakir | Both reviewers completed the checklist and approved all retained code with no changes requested. |
+| 2026-07-17 | Publication | Private GitHub repository and submission handoff package | OpenAI Codex published the approved repository at Noah Hicks's direction. | Repository created as private for handoff; the team will make it public before instructor review. |
 
 ## Prompt Summaries
 

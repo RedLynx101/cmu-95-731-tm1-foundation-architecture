@@ -7,6 +7,12 @@ This repository is the TM1 foundation for a university-services question-answeri
 - Noah Hicks
 - Taha Zakir
 
+## Repository
+
+GitHub: <https://github.com/RedLynx101/cmu-95-731-tm1-foundation-architecture>
+
+The repository is private at handoff. Change it to public before the instructor reviews the submission.
+
 ## Implemented Now
 
 - FastAPI application with `POST /ask` and `GET /health`.
