@@ -1,0 +1,17 @@
+flowchart LR
+    Client["Client\nSends HTTPS question"] --> APIGW["Amazon API Gateway\nPOST /ask and GET /health"]
+    APIGW --> Lambda["AWS Lambda\nFastAPI plus Mangum"]
+    Lambda --> Adapter["Model adapter\nStable provider interface"]
+    Adapter --> Stub["Stub provider\nImplemented in TM1"]
+    Adapter -. future .-> Model["Bedrock or external model\nFuture provider"]
+    Lambda --> CW["Amazon CloudWatch\nLogs and metrics"]
+    Lambda -. future .-> S3["Amazon S3\nFuture approved sources"]
+    IAM["AWS IAM\nLeast-privilege roles"] -. authorizes .-> Lambda
+    Secrets["Secrets Manager or Parameter Store\nFuture external credentials"] -. future .-> Adapter
+
+    classDef implemented fill:#e9f4ef,stroke:#176b5b,color:#102a25,stroke-width:2px;
+    classDef aws fill:#eef3fa,stroke:#315f8c,color:#172b3d,stroke-width:2px;
+    classDef future fill:#fff5df,stroke:#9b6816,color:#4a3512,stroke-width:2px,stroke-dasharray:6 4;
+    class Client,Adapter,Stub implemented;
+    class APIGW,Lambda,CW,IAM aws;
+    class Model,S3,Secrets future;

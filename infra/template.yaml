@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: TM1 university-services question-answering API
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Architectures:
+      - x86_64
+    MemorySize: 256
+    Timeout: 10
+    Tracing: Active
+    Environment:
+      Variables:
+        MODEL_PROVIDER: stub
+        LOG_LEVEL: INFO
+
+Resources:
+  ServicesApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: v1
+
+  AskFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../src
+      Handler: app.lambda_handler.handler
+      Description: Validates questions and returns the configured provider response.
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        Ask:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref ServicesApi
+            Path: /ask
+            Method: POST
+        Health:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref ServicesApi
+            Path: /health
+            Method: GET
+
+Outputs:
+  ApiBaseUrl:
+    Description: Base URL for the deployed API stage.
+    Value: !Sub "https://${ServicesApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/v1"
