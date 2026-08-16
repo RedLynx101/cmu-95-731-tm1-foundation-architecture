@@ -21,4 +21,4 @@ jobs:
       - run: python -m pytest -q
       - run: python scripts/smoke_test.py
       - run: python scripts/render_architecture.py
-      - run: git diff --exit-code -- docs/architecture/tm1-architecture.png
+      - run: python scripts/verify_architecture_asset.py
