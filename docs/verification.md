@@ -15,13 +15,20 @@ Team: Noah Hicks and Taha Zakir.
 | SAM template validation | Pass | AWS SAM CLI 1.137.1 reported `infra/template.yaml is a valid SAM Template`. |
 | SAM build | Pass | AWS SAM packaged the Python 3.12 Lambda source and dependencies under `.aws-sam/build`. |
 | Human review | Pass | Noah Hicks and Taha Zakir reviewed, tested, and approved all retained code on July 17, 2026. |
-| GitHub repository | Pass | Approved source was committed to `main` and published at `https://github.com/RedLynx101/cmu-95-731-tm1-foundation-architecture`. The repository is private at handoff. |
+| GitHub repository | Pass | Approved source was committed to `main` and published at `https://github.com/RedLynx101/cmu-95-731-tm1-foundation-architecture`. Public visibility was reconfirmed on August 16, 2026. |
 
 ## Not Yet Verified
 
 - Opening and rebuilding inside the VS Code devcontainer.
 - Deployment through the temporary AWS Academy Learner Lab session.
 - Public API Gateway URL and CloudWatch evidence from the live sandbox.
-- Canvas submission and changing the GitHub repository from private to public before instructor review.
+- Canvas submission.
 
 These are deliberately excluded from the pass claims above. The local application and deployment package are ready for those checks.
+
+## Public-presentation reconciliation — August 16, 2026
+
+- Repository visibility: public.
+- Reuse license: none surfaced; public visibility is not represented as open-source licensing.
+- Scope boundary retained: the deterministic stub and local contract are implemented; API Gateway, Lambda, CloudWatch, IAM, S3, Bedrock or another external model, and secrets storage remain candidate or future components exactly as labeled in the architecture.
+- No claim of a live AWS deployment was added.

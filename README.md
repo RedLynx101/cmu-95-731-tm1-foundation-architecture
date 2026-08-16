@@ -11,7 +11,7 @@ This repository is the TM1 foundation for a university-services question-answeri
 
 GitHub: <https://github.com/RedLynx101/cmu-95-731-tm1-foundation-architecture>
 
-The repository is private at handoff. Change it to public before the instructor reviews the submission.
+The team-approved source is publicly viewable. The repository does not currently grant a reuse license.
 
 ## Implemented Now
 
@@ -128,3 +128,5 @@ The SAM template is deployable source, not evidence of a completed Academy deplo
 ## Review Gate
 
 Noah Hicks and Taha Zakir completed the review gate on July 17, 2026. Both teammates tested and approved all retained code and confirmed that they can explain the request model, provider boundary, Lambda adapter, tests, and SAM resources. The completed checklist is recorded in [`docs/code-provenance.md`](docs/code-provenance.md). The Learner Lab deployment remains unverified until live sandbox checks pass.
+
+The repository's public-presentation record was reconciled on August 16, 2026. That pass corrected the stale private-repository instructions and reran the local source checks; it did not add evidence of an AWS deployment or external-model integration.

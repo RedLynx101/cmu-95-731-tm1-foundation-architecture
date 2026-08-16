@@ -1,8 +1,8 @@
 GitHub repository:
 https://github.com/RedLynx101/cmu-95-731-tm1-foundation-architecture
 
-Visibility at handoff: Private
-Required before instructor review: Public
+Visibility verified August 16, 2026: Public
+Reuse license: None surfaced
 
 Team review completed: July 17, 2026
 Reviewers: Noah Hicks and Taha Zakir
